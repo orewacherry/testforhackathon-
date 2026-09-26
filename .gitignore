@@ -1,0 +1,34 @@
+# ---------------------------------------------------------------------------
+# Things that must NEVER be committed to Git.
+# If you already committed a secret, see the "I leaked a key" section in
+# README.md — deleting the file is not enough, you must rotate the key.
+# ---------------------------------------------------------------------------
+
+# Environment files hold real secrets (.env) and local settings (.env.local)
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Installed packages. Huge, and the host reinstalls them with `npm install`.
+node_modules/
+
+# Build output that is generated from the source code
+dist/
+build/
+
+# Log files
+*.log
+npm-debug.log*
+
+# Editor and operating system clutter
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Supabase local development folder (created by `supabase start`)
+.supabase/
+
+# Temporary files
+*.tmp
